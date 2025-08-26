@@ -1,17 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
 package com.mycompany.galeriaarte.service;
 
-import com.mycompany.galeriaarte.model.ObraArte;
-import java.util.List;
-
+/**
+ *
+ * @author SANTIAGO
+ */
 public interface IServicioObraArte {
-
-    void añadirObraArte(ObraArte obra);
-
-    List<ObraArte> listarObras();
-
-    void actualizarObraArte(int id, ObraArte obraActualizada);
-
-    void eliminarObraArte(int id);
-
-    ObraArte buscarObraArte(int id);
+    
 }

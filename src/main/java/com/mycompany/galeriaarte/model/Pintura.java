@@ -8,18 +8,37 @@ import java.time.LocalDate;
 
 /**
  *
- * @author SANTIAGO
+ * @author Julian Aranguren-2220231103
  */
-public class Pintura extends ObraArte {
-
+public class Pintura extends ObraArte{
     private String tecnica;
+    private double dimensiones;
 
-    private String dimensiones;
-
-    public Pintura(String tecnica, String dimensiones, int idObra, String titulo, String autor, LocalDate anioCreacion, double precio, String estado) {
+    public Pintura(int idObra, String titulo, String autor, LocalDate anioCreacion, double precio, String estado) {
         super(idObra, titulo, autor, anioCreacion, precio, estado);
         this.tecnica = tecnica;
         this.dimensiones = dimensiones;
+        
     }
 
+    public String getTecnica() {
+        return tecnica;
+    }
+
+    public void setTecnica(String tecnica) {
+        this.tecnica = tecnica;
+    }
+
+    public double getDimensiones() {
+        return dimensiones;
+    }
+
+    public void setDimensiones(double dimensiones) {
+         if (dimensiones < 0) {
+            throw new IllegalArgumentException(" no pueden ser negativo");
+        }
+        this.dimensiones = dimensiones;
+    }
+    
+    
 }

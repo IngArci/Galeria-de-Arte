@@ -8,21 +8,48 @@ import java.time.LocalDate;
 
 /**
  *
- * @author SANTIAGO
+ * @author Julian Aranguren-2220231103
  */
 public class Escultura extends ObraArte {
-
     private double altura;
-
     private double volumen;
+    private String tipoEstructura;
 
-    private String tipoEscultura;
-
-    public Escultura(double altura, double volumen, String tipoEscultura, int idObra, String titulo, String autor, LocalDate anioCreacion, double precio, String estado) {
+    public Escultura(double altura, double volumen, String tipoEstructura, int idObra, String titulo, String autor, LocalDate anioCreacion, double precio, String estado) {
         super(idObra, titulo, autor, anioCreacion, precio, estado);
         this.altura = altura;
         this.volumen = volumen;
-        this.tipoEscultura = tipoEscultura;
+        this.tipoEstructura = tipoEstructura;
     }
 
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException(" no pueden ser negativo");
+        }
+        this.altura = altura;
+    }
+
+    public double getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(double volumen) {
+         if (volumen < 0) {
+            throw new IllegalArgumentException(" no pueden ser negativo");
+        }
+        this.volumen = volumen;
+    }
+
+    public String getTipoEstructura() {
+        return tipoEstructura;
+    }
+
+    public void setTipoEstructura(String tipoEstructura) {
+        this.tipoEstructura = tipoEstructura;
+    }
+    
 }
